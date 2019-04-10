@@ -1,0 +1,53 @@
+/*
+Add transition to containers so they can push in and out.
+*/
+#patterns{
+}
+#patterns .pattern{
+  margin-top: 30px;
+}
+#patterns .margin-text{
+  margin-top: 100px;
+}
+#patterns .pattern-name{
+  text-align: center;
+  font-size: 24px;
+  color:#CA8C20;
+}
+#patterns .pattern-text{
+    font-size: 20px;
+    text-align: justify;
+}
+#patterns .pattern-imgs{
+  display: block;
+  position: relative;
+  height: 420px;
+}
+#patterns .pattern-img{
+  display: inline-block;
+  transition: 0.5s;
+  position: absolute;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5 ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  max-height: 420px;
+  left:50%;
+  transform: translateX(-50%);
+}
+#patterns .pattern-imgs:hover .pattern-img:nth-child(odd){
+  opacity:0;
+}
+#patterns .pattern-imgs:hover .pattern-img:nth-child(even){
+  opacity:1;
+}
+#patterns .pattern-imgs .pattern-img:nth-child(even){
+  opacity:0;
+}
+#patterns .pattern-img{
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+    #patterns .pattern-imgs{
+    }
+}
